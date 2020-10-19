@@ -13,9 +13,11 @@
 		431E5F35253E32C6008C27D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431E5F33253E32C6008C27D2 /* Main.storyboard */; };
 		431E5F37253E32C8008C27D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431E5F36253E32C8008C27D2 /* Assets.xcassets */; };
 		431E5F3A253E32C8008C27D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431E5F38253E32C8008C27D2 /* LaunchScreen.storyboard */; };
+		47A953BA16B5061A10F4F86E /* Pods_FalabellaImageMakerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115FB1A85C570A7A7ECD9315 /* Pods_FalabellaImageMakerDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		115FB1A85C570A7A7ECD9315 /* Pods_FalabellaImageMakerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FalabellaImageMakerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		431E5F2A253E32C6008C27D2 /* FalabellaImageMakerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FalabellaImageMakerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		431E5F2D253E32C6008C27D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		431E5F2F253E32C6008C27D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		431E5F36253E32C8008C27D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		431E5F39253E32C8008C27D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		431E5F3B253E32C8008C27D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2044807D680E88D3DAAC67B /* Pods-FalabellaImageMakerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FalabellaImageMakerDemo.release.xcconfig"; path = "Target Support Files/Pods-FalabellaImageMakerDemo/Pods-FalabellaImageMakerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		D1E8D5530C25A69EB64B7A29 /* Pods-FalabellaImageMakerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FalabellaImageMakerDemo.debug.xcconfig"; path = "Target Support Files/Pods-FalabellaImageMakerDemo/Pods-FalabellaImageMakerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47A953BA16B5061A10F4F86E /* Pods_FalabellaImageMakerDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				431E5F2C253E32C6008C27D2 /* FalabellaImageMakerDemo */,
 				431E5F2B253E32C6008C27D2 /* Products */,
+				48197D6C03BEB5F20FA25A47 /* Pods */,
+				5B2D3C814D1E477E67E3FF4F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = FalabellaImageMakerDemo;
 			sourceTree = "<group>";
 		};
+		48197D6C03BEB5F20FA25A47 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1E8D5530C25A69EB64B7A29 /* Pods-FalabellaImageMakerDemo.debug.xcconfig */,
+				B2044807D680E88D3DAAC67B /* Pods-FalabellaImageMakerDemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5B2D3C814D1E477E67E3FF4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				115FB1A85C570A7A7ECD9315 /* Pods_FalabellaImageMakerDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 431E5F3E253E32C8008C27D2 /* Build configuration list for PBXNativeTarget "FalabellaImageMakerDemo" */;
 			buildPhases = (
+				5F7DEF5BB4D1B610B8242807 /* [CP] Check Pods Manifest.lock */,
 				431E5F26253E32C6008C27D2 /* Sources */,
 				431E5F27253E32C6008C27D2 /* Frameworks */,
 				431E5F28253E32C6008C27D2 /* Resources */,
+				3C57400BE6B1F0C6B321CAC1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C57400BE6B1F0C6B321CAC1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FalabellaImageMakerDemo/Pods-FalabellaImageMakerDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FalabellaImageMakerDemo/Pods-FalabellaImageMakerDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FalabellaImageMakerDemo/Pods-FalabellaImageMakerDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F7DEF5BB4D1B610B8242807 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FalabellaImageMakerDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		431E5F26253E32C6008C27D2 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		431E5F3F253E32C8008C27D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1E8D5530C25A69EB64B7A29 /* Pods-FalabellaImageMakerDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +371,7 @@
 		};
 		431E5F40253E32C8008C27D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2044807D680E88D3DAAC67B /* Pods-FalabellaImageMakerDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
