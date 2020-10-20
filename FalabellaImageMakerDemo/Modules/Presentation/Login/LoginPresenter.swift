@@ -12,7 +12,7 @@ public class LoginPresenter {
     var logUser: LogUser
     weak var ui: LoginUI?
     
-    init(logUser: LogUser, ui: LoginUI?) {
+    public init(logUser: LogUser, ui: LoginUI?) {
         self.logUser = logUser
         self.ui = ui
     }
@@ -42,7 +42,7 @@ public class LoginPresenter {
     }
 }
 
-protocol LoginUI: class {
+public protocol LoginUI: class {
     func loginFailed(message: String)
     func navigate(to route: Route)
 }

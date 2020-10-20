@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct LogUser {
+public struct LogUser {
     
-    var datasource: LocalDatasource
+    public var datasource: UserDatasource
     
-    func log(username: String, password: String) -> String?{
+    public func log(username: String, password: String) -> String?{
         return datasource.logUser(username: username, password: password)
     }
 }

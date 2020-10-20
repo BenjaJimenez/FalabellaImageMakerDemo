@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct RegisterUser {
+public struct RegisterUser {
     
-    var datasource: LocalDatasource
+    var datasource: UserDatasource
     
     func register(username: String, name: String, password: String) -> Bool{
         return datasource.register(username: username, name: name, password: password)

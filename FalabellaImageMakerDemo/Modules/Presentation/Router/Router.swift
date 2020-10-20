@@ -7,12 +7,12 @@
 
 import UIKit
 
-enum Route {
+public enum Route: Equatable {
     case register
     case home(userName: String)
 }
 
-struct Router {
+public struct Router {
     static func navigate(to route: Route, from vc: UIViewController) {
         switch route {
         case .register:

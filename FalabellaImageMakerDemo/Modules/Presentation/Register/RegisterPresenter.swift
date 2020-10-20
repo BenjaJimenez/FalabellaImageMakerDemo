@@ -7,12 +7,12 @@
 
 import Foundation
 
-class RegisterPresenter {
+public class RegisterPresenter {
     
     var registerUser: RegisterUser
     weak var ui: RegisterUI?
     
-    init(registerUser: RegisterUser, ui: RegisterUI?) {
+    public init(registerUser: RegisterUser, ui: RegisterUI?) {
         self.registerUser = registerUser
         self.ui = ui
     }
@@ -36,7 +36,7 @@ class RegisterPresenter {
     }
 }
 
-protocol RegisterUI: class {
+public protocol RegisterUI: class {
     func registrationMessage(title: String, message: String)
 }
 
