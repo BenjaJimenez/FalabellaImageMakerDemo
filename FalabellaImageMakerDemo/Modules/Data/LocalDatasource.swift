@@ -8,7 +8,7 @@
 import Foundation
 import CryptoSwift
 
-protocol LocalDatasource {
+public protocol LocalDatasource {
     func logUser(username: String, password: String) -> String?
     func register(username: String, name: String, password: String) -> Bool
 }

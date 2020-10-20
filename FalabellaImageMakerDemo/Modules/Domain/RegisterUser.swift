@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RegisterUser {
+public struct RegisterUser {
     
     var datasource: LocalDatasource
     
