@@ -35,6 +35,11 @@ struct UserDefaultsDatasource: LocalDatasource {
     }
     
     func register(username: String, name: String, password: String) -> Bool {
+        guard UserDefaults.standard.value(forKey: username) == nil else {
+            // User exists
+            return false
+        }
+        
         do {
             guard let key = kdf(pass: password) else {
                 return false

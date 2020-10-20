@@ -33,7 +33,7 @@ public class LoginPresenter {
             return
         }
         
-        print(name)
+        self.ui?.navigate(to: .home(userName: name))
                 
     }
     

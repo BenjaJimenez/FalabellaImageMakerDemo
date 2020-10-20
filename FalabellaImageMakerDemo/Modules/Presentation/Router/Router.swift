@@ -9,6 +9,7 @@ import UIKit
 
 enum Route {
     case register
+    case home(userName: String)
 }
 
 struct Router {
@@ -17,6 +18,9 @@ struct Router {
         case .register:
             let rvc = RegisterViewController()
             vc.present(rvc, animated: true, completion: nil)
+        case .home(let user):
+            print(user)
+            break
         default:
             break
         }

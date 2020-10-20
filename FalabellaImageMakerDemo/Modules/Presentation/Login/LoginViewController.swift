@@ -10,6 +10,7 @@ import UIKit
 class LoginViewController: UIViewController {
 
     var loginView : UIStackView!
+    var titleLabel: UILabel!
     var usernameTextField : UITextField!
     var passTextField : UITextField!
     var loginButton: UIButton!
@@ -28,6 +29,14 @@ class LoginViewController: UIViewController {
     
     fileprivate func loadViews(){
         self.view.backgroundColor = .white
+        
+        titleLabel = {
+            let l = UILabel()
+            l.font = UIFont.preferredFont(forTextStyle: .largeTitle)
+            l.textAlignment = .center
+            l.text = "Welcome!"
+            return l
+        }()
         
         usernameTextField = {
             let mt = UITextField()
@@ -82,6 +91,7 @@ class LoginViewController: UIViewController {
             return sv
         }()
 
+        loginView.addArrangedSubview(titleLabel)
         loginView.addArrangedSubview(usernameTextField)
         loginView.addArrangedSubview(passTextField)
         loginView.addArrangedSubview(loginButton)
@@ -125,7 +135,9 @@ extension LoginViewController: LoginUI {
     }
     
     func loginFailed(message: String) {
-        //TODO:
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
