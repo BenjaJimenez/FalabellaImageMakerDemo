@@ -21,6 +21,11 @@ class LoginPresenterTests: XCTestCase {
         presenter = LoginPresenter(logUser: useCase, ui: ui)
     }
     
+    override func tearDownWithError() throws {
+        ds.name = nil
+        ui.failedCalled = false
+    }
+    
     func testLoginInvalidFields() throws {
         
         presenter.logUser(username: nil, password: nil)
@@ -43,7 +48,8 @@ class LoginPresenterTests: XCTestCase {
         XCTAssertTrue(ui.failedCalled)
     }
 
-    func testLoginValidFields() throws {    
+    func testLoginValidFields() throws {
+        ds.name = "someName"
         presenter.logUser(username: "user", password: "pass")
         XCTAssertTrue(ds.logCalled)
         XCTAssertFalse(ui.failedCalled)

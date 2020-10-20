@@ -11,7 +11,7 @@
 		431C3015253E45040043A9EF /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3014253E45040043A9EF /* LoginPresenter.swift */; };
 		431C301A253E475B0043A9EF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3019253E475B0043A9EF /* ViewModel.swift */; };
 		431C301D253E490A0043A9EF /* LogUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C301C253E490A0043A9EF /* LogUser.swift */; };
-		431C3022253E49770043A9EF /* LocalDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3021253E49770043A9EF /* LocalDatasource.swift */; };
+		431C3022253E49770043A9EF /* UserDefaultsDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3021253E49770043A9EF /* UserDefaultsDatasource.swift */; };
 		431C3027253E4A440043A9EF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3026253E4A440043A9EF /* RegisterViewController.swift */; };
 		431C302A253E4A500043A9EF /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3029253E4A500043A9EF /* RegisterPresenter.swift */; };
 		431C302D253E4BD80043A9EF /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C302C253E4BD80043A9EF /* RegisterUser.swift */; };
@@ -20,6 +20,8 @@
 		431C305A253F25AD0043A9EF /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3059253F25AD0043A9EF /* LoginPresenterTests.swift */; };
 		431C3069253F284D0043A9EF /* MockLocalDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3068253F284D0043A9EF /* MockLocalDatasource.swift */; };
 		431C306D253F2AA70043A9EF /* RegisterPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C306C253F2AA70043A9EF /* RegisterPresenterTests.swift */; };
+		431C3077253F357C0043A9EF /* UserDefaultsDatasourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3076253F357C0043A9EF /* UserDefaultsDatasourceTests.swift */; };
+		431C307D253F35980043A9EF /* MockUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C307C253F35980043A9EF /* MockUserDefaults.swift */; };
 		431E5F2E253E32C6008C27D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E5F2D253E32C6008C27D2 /* AppDelegate.swift */; };
 		431E5F30253E32C6008C27D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E5F2F253E32C6008C27D2 /* SceneDelegate.swift */; };
 		431E5F32253E32C6008C27D2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E5F31253E32C6008C27D2 /* LoginViewController.swift */; };
@@ -43,7 +45,7 @@
 		431C3014253E45040043A9EF /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		431C3019253E475B0043A9EF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		431C301C253E490A0043A9EF /* LogUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogUser.swift; sourceTree = "<group>"; };
-		431C3021253E49770043A9EF /* LocalDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDatasource.swift; sourceTree = "<group>"; };
+		431C3021253E49770043A9EF /* UserDefaultsDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsDatasource.swift; sourceTree = "<group>"; };
 		431C3026253E4A440043A9EF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		431C3029253E4A500043A9EF /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 		431C302C253E4BD80043A9EF /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
@@ -54,6 +56,8 @@
 		431C3059253F25AD0043A9EF /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
 		431C3068253F284D0043A9EF /* MockLocalDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocalDatasource.swift; sourceTree = "<group>"; };
 		431C306C253F2AA70043A9EF /* RegisterPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenterTests.swift; sourceTree = "<group>"; };
+		431C3076253F357C0043A9EF /* UserDefaultsDatasourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsDatasourceTests.swift; sourceTree = "<group>"; };
+		431C307C253F35980043A9EF /* MockUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaults.swift; sourceTree = "<group>"; };
 		431E5F2A253E32C6008C27D2 /* FalabellaImageMakerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FalabellaImageMakerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		431E5F2D253E32C6008C27D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		431E5F2F253E32C6008C27D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,7 +132,7 @@
 		431C301F253E49560043A9EF /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				431C3021253E49770043A9EF /* LocalDatasource.swift */,
+				431C3021253E49770043A9EF /* UserDefaultsDatasource.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -184,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				431C3068253F284D0043A9EF /* MockLocalDatasource.swift */,
+				431C307C253F35980043A9EF /* MockUserDefaults.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -443,7 +448,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				431C3069253F284D0043A9EF /* MockLocalDatasource.swift in Sources */,
+				431C307D253F35980043A9EF /* MockUserDefaults.swift in Sources */,
 				431C306D253F2AA70043A9EF /* RegisterPresenterTests.swift in Sources */,
+				431C3077253F357C0043A9EF /* UserDefaultsDatasourceTests.swift in Sources */,
 				431C305A253F25AD0043A9EF /* LoginPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,7 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				431C3022253E49770043A9EF /* LocalDatasource.swift in Sources */,
+				431C3022253E49770043A9EF /* UserDefaultsDatasource.swift in Sources */,
 				431C301A253E475B0043A9EF /* ViewModel.swift in Sources */,
 				431C3015253E45040043A9EF /* LoginPresenter.swift in Sources */,
 				431C3033253E54110043A9EF /* ServiceLocator.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  MockLocalDatasource.swift
+//  MockUserDefaultsDatasource.swift
 //  FalabellaImageMakerDemoTests
 //
 //  Created by Benjamin on 20-10-20.
@@ -9,7 +9,7 @@ import Foundation
 @testable import FalabellaImageMakerDemo
 
 
-class MockLocalDatasource: LocalDatasource {
+class MockUserDefaultsDatasource: UserDatasource {
     var logCalled = false
     var registerCalled = false
     var name: String? = nil

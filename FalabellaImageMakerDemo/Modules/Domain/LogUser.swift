@@ -9,7 +9,7 @@ import Foundation
 
 public struct LogUser {
     
-    public var datasource: LocalDatasource
+    public var datasource: UserDatasource
     
     public func log(username: String, password: String) -> String?{
         return datasource.logUser(username: username, password: password)

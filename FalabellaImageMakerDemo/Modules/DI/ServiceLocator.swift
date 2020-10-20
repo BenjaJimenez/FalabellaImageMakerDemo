@@ -30,7 +30,7 @@ struct ServiceLocator {
     
 // MARK: - Datasource
     
-    var localDatasource: LocalDatasource {
-        return UserDefaultsDatasource()
+    var localDatasource: UserDatasource {
+        return UserDefaultsDatasource(userDefaults: UserDefaults.standard)
     }
 }
