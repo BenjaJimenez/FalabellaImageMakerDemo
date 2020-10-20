@@ -173,8 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				431C3061253F25D10043A9EF /* Mocks */,
-				431C3059253F25AD0043A9EF /* LoginPresenterTests.swift */,
-				431C306C253F2AA70043A9EF /* RegisterPresenterTests.swift */,
+				431C3070253F35560043A9EF /* Presenters */,
+				431C3075253F35610043A9EF /* Data */,
 				431C304B253F1EA00043A9EF /* Info.plist */,
 			);
 			path = FalabellaImageMakerDemoTests;
@@ -186,6 +186,23 @@
 				431C3068253F284D0043A9EF /* MockLocalDatasource.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		431C3070253F35560043A9EF /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				431C3059253F25AD0043A9EF /* LoginPresenterTests.swift */,
+				431C306C253F2AA70043A9EF /* RegisterPresenterTests.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		431C3075253F35610043A9EF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				431C3076253F357C0043A9EF /* UserDefaultsDatasourceTests.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		431E5F21253E32C6008C27D2 = {
