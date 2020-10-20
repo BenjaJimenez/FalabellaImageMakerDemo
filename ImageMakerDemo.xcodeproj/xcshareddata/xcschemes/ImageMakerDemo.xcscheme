@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "431E5F29253E32C6008C27D2"
-               BuildableName = "FalabellaImageMakerDemo.app"
-               BlueprintName = "FalabellaImageMakerDemo"
-               ReferencedContainer = "container:FalabellaImageMakerDemo.xcodeproj">
+               BuildableName = "ImageMakerDemo.app"
+               BlueprintName = "ImageMakerDemo"
+               ReferencedContainer = "container:ImageMakerDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "431C3046253F1EA00043A9EF"
-               BuildableName = "FalabellaImageMakerDemoTests.xctest"
-               BlueprintName = "FalabellaImageMakerDemoTests"
-               ReferencedContainer = "container:FalabellaImageMakerDemo.xcodeproj">
+               BuildableName = "ImageMakerDemoTests.xctest"
+               BlueprintName = "ImageMakerDemoTests"
+               ReferencedContainer = "container:ImageMakerDemo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "431E5F29253E32C6008C27D2"
-            BuildableName = "FalabellaImageMakerDemo.app"
-            BlueprintName = "FalabellaImageMakerDemo"
-            ReferencedContainer = "container:FalabellaImageMakerDemo.xcodeproj">
+            BuildableName = "ImageMakerDemo.app"
+            BlueprintName = "ImageMakerDemo"
+            ReferencedContainer = "container:ImageMakerDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "431E5F29253E32C6008C27D2"
-            BuildableName = "FalabellaImageMakerDemo.app"
-            BlueprintName = "FalabellaImageMakerDemo"
-            ReferencedContainer = "container:FalabellaImageMakerDemo.xcodeproj">
+            BuildableName = "ImageMakerDemo.app"
+            BlueprintName = "ImageMakerDemo"
+            ReferencedContainer = "container:ImageMakerDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

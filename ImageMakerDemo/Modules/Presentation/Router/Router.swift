@@ -10,6 +10,8 @@ import UIKit
 public enum Route: Equatable {
     case register
     case home(userName: String)
+    
+    case back
 }
 
 public struct Router {
@@ -19,8 +21,14 @@ public struct Router {
             let rvc = RegisterViewController()
             vc.present(rvc, animated: true, completion: nil)
         case .home(let user):
-            print(user)
+            let hvc = HomeTableViewController()
+            hvc.name = user
+            let nv = UINavigationController(rootViewController: hvc)
+            nv.modalPresentationStyle = .fullScreen
+            vc.present(nv, animated: true, completion: nil)
             break
+        case .back:
+            vc.dismiss(animated: true, completion: nil)
         default:
             break
         }

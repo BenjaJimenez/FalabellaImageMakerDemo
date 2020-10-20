@@ -10,11 +10,11 @@ def shared_pods
 end
 
 
-target 'FalabellaImageMakerDemo' do
+target 'ImageMakerDemo' do
     shared_pods
     pod 'Alamofire'
 end
 
-target 'FalabellaImageMakerDemoTests' do
+target 'ImageMakerDemoTests' do
     shared_pods
 end

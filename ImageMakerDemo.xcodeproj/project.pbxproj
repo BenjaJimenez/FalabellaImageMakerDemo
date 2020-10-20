@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3061C33A2BE1FA9609692487 /* Pods_FalabellaImageMakerDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08B326956F562238DE875B6 /* Pods_FalabellaImageMakerDemoTests.framework */; };
+		399BA07916325DF45D62A6D8 /* Pods_ImageMakerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09218DB00B5DFA00E58D198F /* Pods_ImageMakerDemo.framework */; };
 		431C3015253E45040043A9EF /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3014253E45040043A9EF /* LoginPresenter.swift */; };
 		431C301A253E475B0043A9EF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3019253E475B0043A9EF /* ViewModel.swift */; };
 		431C301D253E490A0043A9EF /* LogUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C301C253E490A0043A9EF /* LogUser.swift */; };
@@ -17,31 +17,34 @@
 		431C302D253E4BD80043A9EF /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C302C253E4BD80043A9EF /* RegisterUser.swift */; };
 		431C3033253E54110043A9EF /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3032253E54110043A9EF /* ServiceLocator.swift */; };
 		431C303F253E86DD0043A9EF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C303E253E86DD0043A9EF /* Router.swift */; };
-		431C305A253F25AD0043A9EF /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3059253F25AD0043A9EF /* LoginPresenterTests.swift */; };
-		431C3069253F284D0043A9EF /* MockLocalDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3068253F284D0043A9EF /* MockLocalDatasource.swift */; };
-		431C306D253F2AA70043A9EF /* RegisterPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C306C253F2AA70043A9EF /* RegisterPresenterTests.swift */; };
-		431C3077253F357C0043A9EF /* UserDefaultsDatasourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3076253F357C0043A9EF /* UserDefaultsDatasourceTests.swift */; };
-		431C307D253F35980043A9EF /* MockUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C307C253F35980043A9EF /* MockUserDefaults.swift */; };
 		431E5F2E253E32C6008C27D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E5F2D253E32C6008C27D2 /* AppDelegate.swift */; };
 		431E5F30253E32C6008C27D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E5F2F253E32C6008C27D2 /* SceneDelegate.swift */; };
 		431E5F32253E32C6008C27D2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E5F31253E32C6008C27D2 /* LoginViewController.swift */; };
 		431E5F37253E32C8008C27D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431E5F36253E32C8008C27D2 /* Assets.xcassets */; };
 		431E5F3A253E32C8008C27D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431E5F38253E32C8008C27D2 /* LaunchScreen.storyboard */; };
-		47A953BA16B5061A10F4F86E /* Pods_FalabellaImageMakerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115FB1A85C570A7A7ECD9315 /* Pods_FalabellaImageMakerDemo.framework */; };
+		43380E37253F740A00977C4F /* MockLocalDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3068253F284D0043A9EF /* MockLocalDatasource.swift */; };
+		43380E38253F740A00977C4F /* MockUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C307C253F35980043A9EF /* MockUserDefaults.swift */; };
+		43380E3D253F742600977C4F /* RegisterPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C306C253F2AA70043A9EF /* RegisterPresenterTests.swift */; };
+		43380E3E253F742600977C4F /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4357F67C253F71D90012F9CB /* HomePresenterTests.swift */; };
+		43380E3F253F742600977C4F /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3059253F25AD0043A9EF /* LoginPresenterTests.swift */; };
+		43380E42253F742E00977C4F /* UserDefaultsDatasourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3076253F357C0043A9EF /* UserDefaultsDatasourceTests.swift */; };
+		4357F64E253F688C0012F9CB /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4357F64D253F688C0012F9CB /* HomeTableViewController.swift */; };
+		4357F652253F698E0012F9CB /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4357F651253F698E0012F9CB /* HomePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		431C304C253F1EA00043A9EF /* PBXContainerItemProxy */ = {
+		43380E30253F73C000977C4F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 431E5F22253E32C6008C27D2 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 431E5F29253E32C6008C27D2;
-			remoteInfo = FalabellaImageMakerDemo;
+			remoteInfo = ImageMakerDemo;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		115FB1A85C570A7A7ECD9315 /* Pods_FalabellaImageMakerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FalabellaImageMakerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		090F7D7E02FE06067140E319 /* Pods-ImageMakerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageMakerDemo.release.xcconfig"; path = "Target Support Files/Pods-ImageMakerDemo/Pods-ImageMakerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		09218DB00B5DFA00E58D198F /* Pods_ImageMakerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageMakerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		431C3014253E45040043A9EF /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		431C3019253E475B0043A9EF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		431C301C253E490A0043A9EF /* LogUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogUser.swift; sourceTree = "<group>"; };
@@ -51,41 +54,45 @@
 		431C302C253E4BD80043A9EF /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
 		431C3032253E54110043A9EF /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		431C303E253E86DD0043A9EF /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		431C3047253F1EA00043A9EF /* FalabellaImageMakerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FalabellaImageMakerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		431C304B253F1EA00043A9EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		431C3059253F25AD0043A9EF /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
 		431C3068253F284D0043A9EF /* MockLocalDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocalDatasource.swift; sourceTree = "<group>"; };
 		431C306C253F2AA70043A9EF /* RegisterPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenterTests.swift; sourceTree = "<group>"; };
 		431C3076253F357C0043A9EF /* UserDefaultsDatasourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsDatasourceTests.swift; sourceTree = "<group>"; };
 		431C307C253F35980043A9EF /* MockUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaults.swift; sourceTree = "<group>"; };
-		431E5F2A253E32C6008C27D2 /* FalabellaImageMakerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FalabellaImageMakerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		431E5F2A253E32C6008C27D2 /* ImageMakerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageMakerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		431E5F2D253E32C6008C27D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		431E5F2F253E32C6008C27D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		431E5F31253E32C6008C27D2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		431E5F36253E32C8008C27D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		431E5F39253E32C8008C27D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		431E5F3B253E32C8008C27D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43380E2B253F73C000977C4F /* ImageMakerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageMakerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4357F64D253F688C0012F9CB /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		4357F651253F698E0012F9CB /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		4357F67C253F71D90012F9CB /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
 		6E0D836ABAE65B30AFDC58BE /* Pods-FalabellaImageMakerDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FalabellaImageMakerDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-FalabellaImageMakerDemoTests/Pods-FalabellaImageMakerDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A6FC1D6D8F484C0EF9534580 /* Pods-ImageMakerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageMakerDemo.debug.xcconfig"; path = "Target Support Files/Pods-ImageMakerDemo/Pods-ImageMakerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		B2044807D680E88D3DAAC67B /* Pods-FalabellaImageMakerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FalabellaImageMakerDemo.release.xcconfig"; path = "Target Support Files/Pods-FalabellaImageMakerDemo/Pods-FalabellaImageMakerDemo.release.xcconfig"; sourceTree = "<group>"; };
 		CD608F6184734494C937F5FD /* Pods-FalabellaImageMakerDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FalabellaImageMakerDemoTests.release.xcconfig"; path = "Target Support Files/Pods-FalabellaImageMakerDemoTests/Pods-FalabellaImageMakerDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		CFC05FCBF328820E531BC050 /* Pods-ImageMakerDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageMakerDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-ImageMakerDemoTests/Pods-ImageMakerDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D1E8D5530C25A69EB64B7A29 /* Pods-FalabellaImageMakerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FalabellaImageMakerDemo.debug.xcconfig"; path = "Target Support Files/Pods-FalabellaImageMakerDemo/Pods-FalabellaImageMakerDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		F08B326956F562238DE875B6 /* Pods_FalabellaImageMakerDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FalabellaImageMakerDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBAB5519576ECD5B492406EF /* Pods-ImageMakerDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageMakerDemoTests.release.xcconfig"; path = "Target Support Files/Pods-ImageMakerDemoTests/Pods-ImageMakerDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		F1AB78A6D43A4B7391CC000C /* Pods_ImageMakerDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageMakerDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		431C3044253F1EA00043A9EF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3061C33A2BE1FA9609692487 /* Pods_FalabellaImageMakerDemoTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		431E5F27253E32C6008C27D2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47A953BA16B5061A10F4F86E /* Pods_FalabellaImageMakerDemo.framework in Frameworks */,
+				399BA07916325DF45D62A6D8 /* Pods_ImageMakerDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43380E28253F73C000977C4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +102,7 @@
 		431C3011253E44D00043A9EF /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				434AC6F7253F680F00FE6DB7 /* Home */,
 				431C3018253E474E0043A9EF /* ViewModel */,
 				431C3013253E44EF0043A9EF /* Login */,
 				431C3025253E4A150043A9EF /* Register */,
@@ -173,17 +181,6 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		431C3048253F1EA00043A9EF /* FalabellaImageMakerDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				431C3061253F25D10043A9EF /* Mocks */,
-				431C3070253F35560043A9EF /* Presenters */,
-				431C3075253F35610043A9EF /* Data */,
-				431C304B253F1EA00043A9EF /* Info.plist */,
-			);
-			path = FalabellaImageMakerDemoTests;
-			sourceTree = "<group>";
-		};
 		431C3061253F25D10043A9EF /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +195,7 @@
 			children = (
 				431C3059253F25AD0043A9EF /* LoginPresenterTests.swift */,
 				431C306C253F2AA70043A9EF /* RegisterPresenterTests.swift */,
+				4357F67C253F71D90012F9CB /* HomePresenterTests.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -213,8 +211,8 @@
 		431E5F21253E32C6008C27D2 = {
 			isa = PBXGroup;
 			children = (
-				431E5F2C253E32C6008C27D2 /* FalabellaImageMakerDemo */,
-				431C3048253F1EA00043A9EF /* FalabellaImageMakerDemoTests */,
+				431E5F2C253E32C6008C27D2 /* ImageMakerDemo */,
+				43380E2C253F73C000977C4F /* ImageMakerDemoTests */,
 				431E5F2B253E32C6008C27D2 /* Products */,
 				48197D6C03BEB5F20FA25A47 /* Pods */,
 				5B2D3C814D1E477E67E3FF4F /* Frameworks */,
@@ -224,13 +222,13 @@
 		431E5F2B253E32C6008C27D2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				431E5F2A253E32C6008C27D2 /* FalabellaImageMakerDemo.app */,
-				431C3047253F1EA00043A9EF /* FalabellaImageMakerDemoTests.xctest */,
+				431E5F2A253E32C6008C27D2 /* ImageMakerDemo.app */,
+				43380E2B253F73C000977C4F /* ImageMakerDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		431E5F2C253E32C6008C27D2 /* FalabellaImageMakerDemo */ = {
+		431E5F2C253E32C6008C27D2 /* ImageMakerDemo */ = {
 			isa = PBXGroup;
 			children = (
 				431C3020253E49600043A9EF /* Modules */,
@@ -240,7 +238,26 @@
 				431E5F38253E32C8008C27D2 /* LaunchScreen.storyboard */,
 				431E5F3B253E32C8008C27D2 /* Info.plist */,
 			);
-			path = FalabellaImageMakerDemo;
+			path = ImageMakerDemo;
+			sourceTree = "<group>";
+		};
+		43380E2C253F73C000977C4F /* ImageMakerDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				431C3061253F25D10043A9EF /* Mocks */,
+				431C3070253F35560043A9EF /* Presenters */,
+				431C3075253F35610043A9EF /* Data */,
+			);
+			path = ImageMakerDemoTests;
+			sourceTree = "<group>";
+		};
+		434AC6F7253F680F00FE6DB7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4357F64D253F688C0012F9CB /* HomeTableViewController.swift */,
+				4357F651253F698E0012F9CB /* HomePresenter.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		48197D6C03BEB5F20FA25A47 /* Pods */ = {
@@ -250,6 +267,10 @@
 				B2044807D680E88D3DAAC67B /* Pods-FalabellaImageMakerDemo.release.xcconfig */,
 				6E0D836ABAE65B30AFDC58BE /* Pods-FalabellaImageMakerDemoTests.debug.xcconfig */,
 				CD608F6184734494C937F5FD /* Pods-FalabellaImageMakerDemoTests.release.xcconfig */,
+				A6FC1D6D8F484C0EF9534580 /* Pods-ImageMakerDemo.debug.xcconfig */,
+				090F7D7E02FE06067140E319 /* Pods-ImageMakerDemo.release.xcconfig */,
+				CFC05FCBF328820E531BC050 /* Pods-ImageMakerDemoTests.debug.xcconfig */,
+				DBAB5519576ECD5B492406EF /* Pods-ImageMakerDemoTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -257,8 +278,8 @@
 		5B2D3C814D1E477E67E3FF4F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				115FB1A85C570A7A7ECD9315 /* Pods_FalabellaImageMakerDemo.framework */,
-				F08B326956F562238DE875B6 /* Pods_FalabellaImageMakerDemoTests.framework */,
+				09218DB00B5DFA00E58D198F /* Pods_ImageMakerDemo.framework */,
+				F1AB78A6D43A4B7391CC000C /* Pods_ImageMakerDemoTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -266,29 +287,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		431C3046253F1EA00043A9EF /* FalabellaImageMakerDemoTests */ = {
+		431E5F29253E32C6008C27D2 /* ImageMakerDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 431C304E253F1EA00043A9EF /* Build configuration list for PBXNativeTarget "FalabellaImageMakerDemoTests" */;
-			buildPhases = (
-				E88E1837B08C3444785821C1 /* [CP] Check Pods Manifest.lock */,
-				431C3043253F1EA00043A9EF /* Sources */,
-				431C3044253F1EA00043A9EF /* Frameworks */,
-				431C3045253F1EA00043A9EF /* Resources */,
-				CD71B177E52FDE57F557F696 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				431C304D253F1EA00043A9EF /* PBXTargetDependency */,
-			);
-			name = FalabellaImageMakerDemoTests;
-			productName = FalabellaImageMakerDemoTests;
-			productReference = 431C3047253F1EA00043A9EF /* FalabellaImageMakerDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		431E5F29253E32C6008C27D2 /* FalabellaImageMakerDemo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 431E5F3E253E32C8008C27D2 /* Build configuration list for PBXNativeTarget "FalabellaImageMakerDemo" */;
+			buildConfigurationList = 431E5F3E253E32C8008C27D2 /* Build configuration list for PBXNativeTarget "ImageMakerDemo" */;
 			buildPhases = (
 				5F7DEF5BB4D1B610B8242807 /* [CP] Check Pods Manifest.lock */,
 				431E5F26253E32C6008C27D2 /* Sources */,
@@ -300,10 +301,28 @@
 			);
 			dependencies = (
 			);
-			name = FalabellaImageMakerDemo;
+			name = ImageMakerDemo;
 			productName = FalabellaImageMakerDemo;
-			productReference = 431E5F2A253E32C6008C27D2 /* FalabellaImageMakerDemo.app */;
+			productReference = 431E5F2A253E32C6008C27D2 /* ImageMakerDemo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		43380E2A253F73C000977C4F /* ImageMakerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43380E32253F73C000977C4F /* Build configuration list for PBXNativeTarget "ImageMakerDemoTests" */;
+			buildPhases = (
+				43380E27253F73C000977C4F /* Sources */,
+				43380E28253F73C000977C4F /* Frameworks */,
+				43380E29253F73C000977C4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43380E31253F73C000977C4F /* PBXTargetDependency */,
+			);
+			name = ImageMakerDemoTests;
+			productName = ImageMakerDemoTests;
+			productReference = 43380E2B253F73C000977C4F /* ImageMakerDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -314,16 +333,16 @@
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
-					431C3046253F1EA00043A9EF = {
-						CreatedOnToolsVersion = 12.0.1;
-						TestTargetID = 431E5F29253E32C6008C27D2;
-					};
 					431E5F29253E32C6008C27D2 = {
 						CreatedOnToolsVersion = 12.0.1;
 					};
+					43380E2A253F73C000977C4F = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 431E5F29253E32C6008C27D2;
+					};
 				};
 			};
-			buildConfigurationList = 431E5F25253E32C6008C27D2 /* Build configuration list for PBXProject "FalabellaImageMakerDemo" */;
+			buildConfigurationList = 431E5F25253E32C6008C27D2 /* Build configuration list for PBXProject "ImageMakerDemo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -336,26 +355,26 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				431E5F29253E32C6008C27D2 /* FalabellaImageMakerDemo */,
-				431C3046253F1EA00043A9EF /* FalabellaImageMakerDemoTests */,
+				431E5F29253E32C6008C27D2 /* ImageMakerDemo */,
+				43380E2A253F73C000977C4F /* ImageMakerDemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		431C3045253F1EA00043A9EF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		431E5F28253E32C6008C27D2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				431E5F3A253E32C8008C27D2 /* LaunchScreen.storyboard in Resources */,
 				431E5F37253E32C8008C27D2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43380E29253F73C000977C4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,15 +387,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FalabellaImageMakerDemo/Pods-FalabellaImageMakerDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ImageMakerDemo/Pods-ImageMakerDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FalabellaImageMakerDemo/Pods-FalabellaImageMakerDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ImageMakerDemo/Pods-ImageMakerDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FalabellaImageMakerDemo/Pods-FalabellaImageMakerDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImageMakerDemo/Pods-ImageMakerDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5F7DEF5BB4D1B610B8242807 /* [CP] Check Pods Manifest.lock */ = {
@@ -394,46 +413,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FalabellaImageMakerDemo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CD71B177E52FDE57F557F696 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FalabellaImageMakerDemoTests/Pods-FalabellaImageMakerDemoTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FalabellaImageMakerDemoTests/Pods-FalabellaImageMakerDemoTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FalabellaImageMakerDemoTests/Pods-FalabellaImageMakerDemoTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E88E1837B08C3444785821C1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FalabellaImageMakerDemoTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ImageMakerDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -443,28 +423,18 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		431C3043253F1EA00043A9EF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				431C3069253F284D0043A9EF /* MockLocalDatasource.swift in Sources */,
-				431C307D253F35980043A9EF /* MockUserDefaults.swift in Sources */,
-				431C306D253F2AA70043A9EF /* RegisterPresenterTests.swift in Sources */,
-				431C3077253F357C0043A9EF /* UserDefaultsDatasourceTests.swift in Sources */,
-				431C305A253F25AD0043A9EF /* LoginPresenterTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		431E5F26253E32C6008C27D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				431C3022253E49770043A9EF /* UserDefaultsDatasource.swift in Sources */,
 				431C301A253E475B0043A9EF /* ViewModel.swift in Sources */,
+				4357F64E253F688C0012F9CB /* HomeTableViewController.swift in Sources */,
 				431C3015253E45040043A9EF /* LoginPresenter.swift in Sources */,
 				431C3033253E54110043A9EF /* ServiceLocator.swift in Sources */,
 				431C303F253E86DD0043A9EF /* Router.swift in Sources */,
 				431C3027253E4A440043A9EF /* RegisterViewController.swift in Sources */,
+				4357F652253F698E0012F9CB /* HomePresenter.swift in Sources */,
 				431C302A253E4A500043A9EF /* RegisterPresenter.swift in Sources */,
 				431C302D253E4BD80043A9EF /* RegisterUser.swift in Sources */,
 				431E5F32253E32C6008C27D2 /* LoginViewController.swift in Sources */,
@@ -474,13 +444,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		43380E27253F73C000977C4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43380E37253F740A00977C4F /* MockLocalDatasource.swift in Sources */,
+				43380E38253F740A00977C4F /* MockUserDefaults.swift in Sources */,
+				43380E3E253F742600977C4F /* HomePresenterTests.swift in Sources */,
+				43380E3F253F742600977C4F /* LoginPresenterTests.swift in Sources */,
+				43380E42253F742E00977C4F /* UserDefaultsDatasourceTests.swift in Sources */,
+				43380E3D253F742600977C4F /* RegisterPresenterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		431C304D253F1EA00043A9EF /* PBXTargetDependency */ = {
+		43380E31253F73C000977C4F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 431E5F29253E32C6008C27D2 /* FalabellaImageMakerDemo */;
-			targetProxy = 431C304C253F1EA00043A9EF /* PBXContainerItemProxy */;
+			target = 431E5F29253E32C6008C27D2 /* ImageMakerDemo */;
+			targetProxy = 43380E30253F73C000977C4F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -496,46 +479,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		431C304F253F1EA00043A9EF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E0D836ABAE65B30AFDC58BE /* Pods-FalabellaImageMakerDemoTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = FalabellaImageMakerDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.demo.FalabellaImageMakerDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FalabellaImageMakerDemo.app/FalabellaImageMakerDemo";
-			};
-			name = Debug;
-		};
-		431C3050253F1EA00043A9EF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD608F6184734494C937F5FD /* Pods-FalabellaImageMakerDemoTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = FalabellaImageMakerDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.demo.FalabellaImageMakerDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FalabellaImageMakerDemo.app/FalabellaImageMakerDemo";
-			};
-			name = Release;
-		};
 		431E5F3C253E32C8008C27D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -654,18 +597,18 @@
 		};
 		431E5F3F253E32C8008C27D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1E8D5530C25A69EB64B7A29 /* Pods-FalabellaImageMakerDemo.debug.xcconfig */;
+			baseConfigurationReference = A6FC1D6D8F484C0EF9534580 /* Pods-ImageMakerDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				INFOPLIST_FILE = FalabellaImageMakerDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ImageMakerDemo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.demo.FalabellaImageMakerDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.ImageMakerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -674,37 +617,66 @@
 		};
 		431E5F40253E32C8008C27D2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2044807D680E88D3DAAC67B /* Pods-FalabellaImageMakerDemo.release.xcconfig */;
+			baseConfigurationReference = 090F7D7E02FE06067140E319 /* Pods-ImageMakerDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				INFOPLIST_FILE = FalabellaImageMakerDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ImageMakerDemo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.demo.FalabellaImageMakerDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.ImageMakerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
+		43380E33253F73C000977C4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ImageMakerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.ImageMakerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageMakerDemo.app/ImageMakerDemo";
+			};
+			name = Debug;
+		};
+		43380E34253F73C000977C4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ImageMakerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.ImageMakerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageMakerDemo.app/ImageMakerDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		431C304E253F1EA00043A9EF /* Build configuration list for PBXNativeTarget "FalabellaImageMakerDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				431C304F253F1EA00043A9EF /* Debug */,
-				431C3050253F1EA00043A9EF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		431E5F25253E32C6008C27D2 /* Build configuration list for PBXProject "FalabellaImageMakerDemo" */ = {
+		431E5F25253E32C6008C27D2 /* Build configuration list for PBXProject "ImageMakerDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				431E5F3C253E32C8008C27D2 /* Debug */,
@@ -713,11 +685,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		431E5F3E253E32C8008C27D2 /* Build configuration list for PBXNativeTarget "FalabellaImageMakerDemo" */ = {
+		431E5F3E253E32C8008C27D2 /* Build configuration list for PBXNativeTarget "ImageMakerDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				431E5F3F253E32C8008C27D2 /* Debug */,
 				431E5F40253E32C8008C27D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43380E32253F73C000977C4F /* Build configuration list for PBXNativeTarget "ImageMakerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43380E33253F73C000977C4F /* Debug */,
+				43380E34253F73C000977C4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

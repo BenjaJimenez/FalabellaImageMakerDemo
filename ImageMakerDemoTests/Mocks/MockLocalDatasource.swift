@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@testable import FalabellaImageMakerDemo
+@testable import ImageMakerDemo
 
 
 class MockUserDefaultsDatasource: UserDatasource {

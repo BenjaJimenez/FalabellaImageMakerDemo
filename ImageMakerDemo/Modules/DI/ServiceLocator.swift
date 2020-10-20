@@ -17,6 +17,10 @@ struct ServiceLocator {
     func loginPresenter(ui: LoginUI?) -> LoginPresenter{
         return LoginPresenter(logUser: logUser, ui: ui)
     }
+    
+    func homePresenter(ui: HomeUI?) -> HomePresenter{
+        return HomePresenter(ui: ui)
+    }
 
 // MARK: - Use Cases
     

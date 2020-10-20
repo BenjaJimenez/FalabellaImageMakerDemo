@@ -6,8 +6,7 @@
 //
 
 import XCTest
-@testable import FalabellaImageMakerDemo
-
+@testable import ImageMakerDemo
 
 class UserDefaultsDatasourceTests: XCTestCase {
     
