@@ -11,6 +11,11 @@
 		431C301A253E475B0043A9EF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3019253E475B0043A9EF /* ViewModel.swift */; };
 		431C301D253E490A0043A9EF /* LogUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C301C253E490A0043A9EF /* LogUser.swift */; };
 		431C3022253E49770043A9EF /* LocalDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3021253E49770043A9EF /* LocalDatasource.swift */; };
+		431C3027253E4A440043A9EF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3026253E4A440043A9EF /* RegisterViewController.swift */; };
+		431C302A253E4A500043A9EF /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3029253E4A500043A9EF /* RegisterPresenter.swift */; };
+		431C302D253E4BD80043A9EF /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C302C253E4BD80043A9EF /* RegisterUser.swift */; };
+		431C3033253E54110043A9EF /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3032253E54110043A9EF /* ServiceLocator.swift */; };
+		431C303F253E86DD0043A9EF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C303E253E86DD0043A9EF /* Router.swift */; };
 		431E5F2E253E32C6008C27D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E5F2D253E32C6008C27D2 /* AppDelegate.swift */; };
 		431E5F30253E32C6008C27D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E5F2F253E32C6008C27D2 /* SceneDelegate.swift */; };
 		431E5F32253E32C6008C27D2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E5F31253E32C6008C27D2 /* LoginViewController.swift */; };
@@ -25,6 +30,11 @@
 		431C3019253E475B0043A9EF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		431C301C253E490A0043A9EF /* LogUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogUser.swift; sourceTree = "<group>"; };
 		431C3021253E49770043A9EF /* LocalDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDatasource.swift; sourceTree = "<group>"; };
+		431C3026253E4A440043A9EF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		431C3029253E4A500043A9EF /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		431C302C253E4BD80043A9EF /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
+		431C3032253E54110043A9EF /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		431C303E253E86DD0043A9EF /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		431E5F2A253E32C6008C27D2 /* FalabellaImageMakerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FalabellaImageMakerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		431E5F2D253E32C6008C27D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		431E5F2F253E32C6008C27D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +63,8 @@
 			children = (
 				431C3018253E474E0043A9EF /* ViewModel */,
 				431C3013253E44EF0043A9EF /* Login */,
+				431C3025253E4A150043A9EF /* Register */,
+				431C303D253E86D10043A9EF /* Router */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -61,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				431C301C253E490A0043A9EF /* LogUser.swift */,
+				431C302C253E4BD80043A9EF /* RegisterUser.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -93,11 +106,37 @@
 		431C3020253E49600043A9EF /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				431C3031253E54070043A9EF /* DI */,
 				431C3011253E44D00043A9EF /* Presentation */,
 				431C3012253E44E10043A9EF /* Domain */,
 				431C301F253E49560043A9EF /* Data */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		431C3025253E4A150043A9EF /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				431C3026253E4A440043A9EF /* RegisterViewController.swift */,
+				431C3029253E4A500043A9EF /* RegisterPresenter.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		431C3031253E54070043A9EF /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				431C3032253E54110043A9EF /* ServiceLocator.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		431C303D253E86D10043A9EF /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				431C303E253E86DD0043A9EF /* Router.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		431E5F21253E32C6008C27D2 = {
@@ -264,6 +303,11 @@
 				431C3022253E49770043A9EF /* LocalDatasource.swift in Sources */,
 				431C301A253E475B0043A9EF /* ViewModel.swift in Sources */,
 				431C3015253E45040043A9EF /* LoginPresenter.swift in Sources */,
+				431C3033253E54110043A9EF /* ServiceLocator.swift in Sources */,
+				431C303F253E86DD0043A9EF /* Router.swift in Sources */,
+				431C3027253E4A440043A9EF /* RegisterViewController.swift in Sources */,
+				431C302A253E4A500043A9EF /* RegisterPresenter.swift in Sources */,
+				431C302D253E4BD80043A9EF /* RegisterUser.swift in Sources */,
 				431E5F32253E32C6008C27D2 /* LoginViewController.swift in Sources */,
 				431E5F2E253E32C6008C27D2 /* AppDelegate.swift in Sources */,
 				431E5F30253E32C6008C27D2 /* SceneDelegate.swift in Sources */,

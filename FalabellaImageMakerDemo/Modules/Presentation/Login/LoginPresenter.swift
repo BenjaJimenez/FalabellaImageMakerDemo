@@ -9,9 +9,11 @@ import Foundation
 
 public class LoginPresenter {
     
+    var logUser: LogUser
     weak var ui: LoginUI?
     
-    init(ui: LoginUI) {
+    init(logUser: LogUser, ui: LoginUI?) {
+        self.logUser = logUser
         self.ui = ui
     }
     
@@ -26,14 +28,22 @@ public class LoginPresenter {
             return
         }
         
+        guard let name = logUser.log(username: username, password: password) else {
+            ui?.loginFailed(message: Constant.invalidUserOrPassword)
+            return
+        }
         
+                
+    }
+    
+    func registerSelected() {
+        self.ui?.navigate(to: .register)
     }
 }
 
 protocol LoginUI: class {
     func loginFailed(message: String)
-    func displayHome(data: String)
-    
+    func navigate(to route: Route)
 }
 
 fileprivate struct Constant {

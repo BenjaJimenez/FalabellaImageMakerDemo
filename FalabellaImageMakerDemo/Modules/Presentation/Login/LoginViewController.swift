@@ -10,22 +10,26 @@ import UIKit
 class LoginViewController: UIViewController {
 
     var loginView : UIStackView!
-    var mailTextField : UITextField!
+    var usernameTextField : UITextField!
     var passTextField : UITextField!
     var loginButton: UIButton!
+    var registerButton: UIButton!
     
+    let locator = ServiceLocator()
+    var presenter: LoginPresenter?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         loadViews()
+        presenter = locator.loginPresenter(ui: self)
     }
     
     fileprivate func loadViews(){
         self.view.backgroundColor = .white
         
-        mailTextField = {
+        usernameTextField = {
             let mt = UITextField()
             mt.placeholder = "Username"
             mt.font = UIFont.systemFont(ofSize: 15)
@@ -52,12 +56,19 @@ class LoginViewController: UIViewController {
         
         loginButton = {
             let b =  UIButton.init(type: .system)
-            b.setTitle("Iniciar Sesion", for: .normal)
+            b.setTitle("Login", for: .normal)
+            return b
+        }()
+        
+        registerButton = {
+            let b =  UIButton.init(type: .system)
+            b.setTitle("Register", for: .normal)
+            b.addTarget(self, action: #selector(registerButtonTouched), for: .touchUpInside)
             return b
         }()
 
         //Stack View
-        let loginView = {
+        loginView = {
             let sv = UIStackView()
             sv.translatesAutoresizingMaskIntoConstraints = false
             sv.axis  = NSLayoutConstraint.Axis.vertical
@@ -67,9 +78,10 @@ class LoginViewController: UIViewController {
             return sv
         }()
 
-        loginView.addArrangedSubview(mailTextField)
+        loginView.addArrangedSubview(usernameTextField)
         loginView.addArrangedSubview(passTextField)
         loginView.addArrangedSubview(loginButton)
+        loginView.addArrangedSubview(registerButton)
 
         self.view.addSubview(loginView)
 
@@ -77,6 +89,21 @@ class LoginViewController: UIViewController {
         loginView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         loginView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         loginView.widthAnchor.constraint(equalToConstant: self.view.frame.width * 0.8).isActive = true
+    }
+    
+    
+    @objc func registerButtonTouched(){
+        self.presenter?.registerSelected()
+    }
+}
+
+extension LoginViewController: LoginUI {
+    func navigate(to route: Route) {
+        Router.navigate(to: route, from: self)
+    }
+    
+    func loginFailed(message: String) {
+        //TODO:
     }
 }
 
