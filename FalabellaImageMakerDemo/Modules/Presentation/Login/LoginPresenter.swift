@@ -33,6 +33,7 @@ public class LoginPresenter {
             return
         }
         
+        print(name)
                 
     }
     

@@ -72,7 +72,7 @@ class RegisterViewController: UIViewController {
             pt.autocorrectionType = .no
             pt.isSecureTextEntry = true
             pt.keyboardType = .default
-            pt.returnKeyType = .next
+            pt.returnKeyType = .done
             pt.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
             pt.delegate = self
             return pt

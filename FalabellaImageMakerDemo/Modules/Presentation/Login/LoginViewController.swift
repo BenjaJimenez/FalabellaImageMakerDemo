@@ -33,10 +33,12 @@ class LoginViewController: UIViewController {
             let mt = UITextField()
             mt.placeholder = "Username"
             mt.font = UIFont.systemFont(ofSize: 15)
-            mt.borderStyle = UITextField.BorderStyle.roundedRect
-            mt.autocorrectionType = UITextAutocorrectionType.no
-            mt.keyboardType = UIKeyboardType.default
-            mt.returnKeyType = UIReturnKeyType.next
+            mt.borderStyle = .roundedRect
+            mt.autocorrectionType = .no
+            mt.keyboardType = .emailAddress
+            mt.autocapitalizationType = .none
+            mt.returnKeyType = .next
+            mt.delegate = self
             mt.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
             return mt
         }()
@@ -45,11 +47,12 @@ class LoginViewController: UIViewController {
             let pt = UITextField()
             pt.placeholder = "Password"
             pt.font = UIFont.systemFont(ofSize: 15)
-            pt.borderStyle = UITextField.BorderStyle.roundedRect
-            pt.autocorrectionType = UITextAutocorrectionType.no
+            pt.borderStyle = .roundedRect
+            pt.autocorrectionType = .no
             pt.isSecureTextEntry = true
-            pt.keyboardType = UIKeyboardType.emailAddress
-            pt.returnKeyType = UIReturnKeyType.next
+            pt.keyboardType = .default
+            pt.returnKeyType = .done
+            pt.delegate = self
             pt.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
             return pt
         }()
@@ -57,6 +60,7 @@ class LoginViewController: UIViewController {
         loginButton = {
             let b =  UIButton.init(type: .system)
             b.setTitle("Login", for: .normal)
+            b.addTarget(self, action: #selector(loginButtonTouched), for: .touchUpInside)
             return b
         }()
         
@@ -91,9 +95,27 @@ class LoginViewController: UIViewController {
         loginView.widthAnchor.constraint(equalToConstant: self.view.frame.width * 0.8).isActive = true
     }
     
+    @objc func loginButtonTouched(){
+        self.presenter?.logUser(username: usernameTextField.text, password: passTextField.text)
+    }
     
     @objc func registerButtonTouched(){
         self.presenter?.registerSelected()
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case usernameTextField:
+            passTextField.becomeFirstResponder()
+        case passTextField:
+            loginButtonTouched()
+            passTextField.resignFirstResponder()
+        default:
+            break
+        }
+        return true
     }
 }
 
