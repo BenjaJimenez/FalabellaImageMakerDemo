@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Alamofire
+
 
 public protocol PharmacyDatasource {
     func getPharmacies(completion: @escaping ([Pharmacy]?) -> Void)
@@ -14,9 +14,11 @@ public protocol PharmacyDatasource {
 
 public struct MinsalDatasource : PharmacyDatasource {
     
+    var apiClient: APIClient
+    
     public func getPharmacies(completion: @escaping ([Pharmacy]?) -> Void){
-        AF.request("https://farmanet.minsal.cl/index.php/ws/getLocales").response { response in
-            guard let data = response.data else {
+        apiClient.request(url: "https://farmanet.minsal.cl/index.php/ws/getLocales") { data in
+            guard let data = data else {
                 completion(nil)
                 return
             }

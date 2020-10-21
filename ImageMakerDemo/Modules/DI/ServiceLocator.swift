@@ -43,6 +43,6 @@ struct ServiceLocator {
     }
     
     var minsalDatasource: MinsalDatasource {
-        return MinsalDatasource()
+        return MinsalDatasource(apiClient: AlamoAPIClient())
     }
 }
