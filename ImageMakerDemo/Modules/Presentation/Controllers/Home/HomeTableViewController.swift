@@ -9,6 +9,10 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
     
+    var queryTextfield: UITextField!
+    var limitTextfield: UITextField!
+    var searchButton: UIButton!
+    
     let locator = ServiceLocator()
     var presenter: HomePresenter?
     var name : String?
@@ -30,16 +34,86 @@ class HomeTableViewController: UITableViewController {
         self.navigationItem.setRightBarButton(barButton, animated: true)
         
         tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
+        
+        queryTextfield = {
+            let qt = UITextField()
+            qt.placeholder = "Search"
+            qt.font = UIFont.systemFont(ofSize: 15)
+            qt.borderStyle = .roundedRect
+            qt.autocorrectionType = .no
+            qt.keyboardType = .alphabet
+            qt.autocapitalizationType = .none
+            qt.returnKeyType = .next
+//            mt.delegate = self
+            qt.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
+            qt.delegate = self
+            return qt
+        }()
+        
+        limitTextfield = {
+            let lt = UITextField()
+            lt.placeholder = "Limit"
+            lt.font = UIFont.systemFont(ofSize: 15)
+            lt.borderStyle = .roundedRect
+            lt.autocorrectionType = .no
+            lt.keyboardType = .numberPad
+            lt.returnKeyType = .search
+//            pt.delegate = self
+            lt.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
+            lt.widthAnchor.constraint(equalToConstant: 50).isActive = true
+            lt.delegate = self
+            return lt
+        }()
+        
+        searchButton = {
+            let b =  UIButton(type: .system)
+            b.setTitle("Search", for: .normal)
+            b.addTarget(self, action: #selector(searchButtonTouched(_:)), for: .touchUpInside)
+            b.tintColor = .white
+            b.widthAnchor.constraint(equalToConstant: 50).isActive = true
+            return b
+        }()
+        
+        let stackView : UIStackView = {
+            let sv = UIStackView()
+            sv.translatesAutoresizingMaskIntoConstraints = false
+            sv.axis  = .horizontal
+            sv.distribution  = UIStackView.Distribution.fillProportionally
+            sv.alignment = UIStackView.Alignment.center
+            sv.spacing = 8
+            return sv
+        }()
+        
+        stackView.addArrangedSubview(queryTextfield)
+        stackView.addArrangedSubview(limitTextfield)
+        stackView.addArrangedSubview(searchButton)
+        
+        let view = UIView.init(frame: CGRect(x: 0, y: 0, width: self.tableView.frame.width, height: 50))
+        view.backgroundColor = .darkGray
+        view.addSubview(stackView)
+        
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[stackView]|", options: .alignAllBottom, metrics: nil, views: ["stackView": stackView]));
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[stackView]-|", options: .alignAllBottom, metrics: nil, views: ["stackView": stackView]));
+        
+        
+        self.tableView.tableHeaderView = view
 
     }
     
     @objc func logoutTouched(_ sender: Any?){
         self.presenter?.logoutSelected()
     }
+    
+    @objc func searchButtonTouched(_ sender: Any? = nil){
+        print("Search")
+        self.presenter?.searchData(query: queryTextfield.text, limit: limitTextfield.text)
+    }
 }
 
+// MARK: - UI Protocol
+
 extension HomeTableViewController: HomeUI {
-  
+    
     func displayPharmacies(_ pharmacies: [PharmacyCell]) {
         self.pharmacies = pharmacies
         self.tableView.reloadData()
@@ -55,6 +129,12 @@ extension HomeTableViewController: HomeUI {
         alert.addAction(UIAlertAction(title: "Logout", style: .destructive) { (action) in
             self.presenter?.logoutConfirmed()
         })
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func displayMessage(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
 }
@@ -75,5 +155,18 @@ extension HomeTableViewController {
 
         return cell
     }
+}
 
+// MARK: - textfield Delegates
+
+extension HomeTableViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if queryTextfield.isFirstResponder {
+            limitTextfield.becomeFirstResponder()
+        }else if limitTextfield.isFirstResponder {
+            limitTextfield.resignFirstResponder()
+            searchButtonTouched()
+        }
+        return true
+    }
 }

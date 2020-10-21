@@ -22,8 +22,8 @@ public class HomePresenter {
         loadData()
     }
     
-    func loadData() {
-        getPharmacies.get { [weak self] response in
+    func loadData(query: String? = nil, limit: Int? = nil) {
+        getPharmacies.get(keyword: query, limit: limit) { [weak self] response in
             guard let self = self else {
                 return
             }
@@ -37,10 +37,25 @@ public class HomePresenter {
         }
     }
     
+    func searchData(query: String?, limit: String?){
+        if let limit = limit, !limit.isEmpty, Int(limit) == nil {
+            ui?.displayMessage(title: Constant.error, message: Constant.invalidLimit)
+            return
+        }
+        loadData(query: query, limit: Int(limit ?? ""))
+    }
+    
     func mapResults(_ pharmacies: [Pharmacy]){
-        let vms = self.mapper.mapAll(pharmacies)
+        guard pharmacies.count > 0 else {
+            ui?.displayMessage(title: Constant.error, message: Constant.noResults)
+            return
+        }
+        
+        let vms = mapper.mapAll(pharmacies)
         if vms.count > 0 {
-            self.ui?.displayPharmacies(vms)
+            ui?.displayPharmacies(vms)
+        }else {
+            ui?.displayMessage(title: Constant.error, message: Constant.invalidData)
         }
     }
     
@@ -57,6 +72,13 @@ public protocol HomeUI: class {
     func displayPharmacies(_ pharmacies: [PharmacyCell])
     func askLogoutConfirmation()
     func navigate(to route: Route)
+    func displayMessage(title: String, message: String)
 }
 
+fileprivate struct Constant {
+    static let error = "Error"
+    static let noResults = "No data was received"
+    static let invalidData = "Invalid data received"
+    static let invalidLimit = "Limit has to be a number"
+}
 

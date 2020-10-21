@@ -29,6 +29,8 @@ class HomePresenterTests: XCTestCase {
         ui.destination = nil
         ui.vms = []
         ui.displayCalled = false
+        ui.messageCalled = false
+        ui.messageTitle = ""
     }
     
     func testLoadEmptyData(){
@@ -46,10 +48,20 @@ class HomePresenterTests: XCTestCase {
         XCTAssertEqual(presenter.pharmacies.count, 3)
     }
     
+    func testMapNoData(){
+        presenter.mapResults([])
+        XCTAssertFalse(ui.displayCalled)
+        XCTAssertEqual(ui.vms.count, 0)
+        XCTAssertTrue(ui.messageCalled)
+        XCTAssertEqual("Error", ui.messageTitle)
+    }
+    
     func testMapInvalidData(){
         presenter.mapResults([Pharmacy(), Pharmacy()])
         XCTAssertFalse(ui.displayCalled)
         XCTAssertEqual(ui.vms.count, 0)
+        XCTAssertTrue(ui.messageCalled)
+        XCTAssertEqual("Error", ui.messageTitle)
     }
     
     func testMapMixedData(){
@@ -139,6 +151,22 @@ class HomePresenterTests: XCTestCase {
         XCTAssertNotNil(ui.destination)
         XCTAssertEqual(Route.back, ui.destination)
     }
+    
+    func testSearchNoFields() throws {
+        presenter.searchData(query: nil, limit: nil)
+        XCTAssertTrue(uc.called)
+    }
+    
+    func testSearchFields() throws {
+        presenter.searchData(query: "query", limit: "5")
+        XCTAssertTrue(uc.called)
+    }
+    
+    func testSearchNoNumericLimit() throws {
+        presenter.searchData(query: "query", limit: "query")
+        XCTAssertTrue(ui.messageCalled)
+        XCTAssertEqual("Error", ui.messageTitle)
+    }
 
 }
 
@@ -148,6 +176,8 @@ fileprivate class MockUI: HomeUI {
     var destination: Route!
     var vms: [PharmacyCell] = []
     var displayCalled = false
+    var messageCalled = false
+    var messageTitle = ""
     
     func displayPharmacies(_ pharmacies: [PharmacyCell]) {
         displayCalled = true
@@ -160,6 +190,11 @@ fileprivate class MockUI: HomeUI {
     
     func navigate(to route: Route) {
         destination = route
+    }
+    
+    func displayMessage(title: String, message: String) {
+        messageCalled = true
+        messageTitle = title
     }
     
     
