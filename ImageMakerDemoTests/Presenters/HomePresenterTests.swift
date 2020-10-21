@@ -167,6 +167,39 @@ class HomePresenterTests: XCTestCase {
         XCTAssertTrue(ui.messageCalled)
         XCTAssertEqual("Error", ui.messageTitle)
     }
+    
+    func testSelectPharmacy() throws {
+        let validPharmacy: Pharmacy = {
+            var p = Pharmacy()
+            p.id = "1"
+            p.name = "name"
+            p.address = "address"
+            p.city = "city"
+            return p
+        }()
+        
+        presenter.pharmacies = [validPharmacy]
+        presenter.pharmacySelected(id: "1")
+        XCTAssertNotNil(ui.destination)
+        XCTAssertEqual(Route.detail(pharmacy: validPharmacy), ui.destination)
+    }
+    
+    func testSelectInvalidPharmacy() throws {
+        let validPharmacy: Pharmacy = {
+            var p = Pharmacy()
+            p.id = "1"
+            p.name = "name"
+            p.address = "address"
+            p.city = "city"
+            return p
+        }()
+        
+        presenter.pharmacies = [validPharmacy]
+        presenter.pharmacySelected(id: "2")
+        XCTAssertNil(ui.destination)
+        XCTAssertTrue(ui.messageCalled)
+        XCTAssertEqual("Error", ui.messageTitle)
+    }
 
 }
 

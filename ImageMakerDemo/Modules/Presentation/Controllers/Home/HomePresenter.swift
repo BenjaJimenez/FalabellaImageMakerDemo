@@ -59,6 +59,14 @@ public class HomePresenter {
         }
     }
     
+    func pharmacySelected(id: String){
+        guard let pharmacy = pharmacies.first(where: {$0.id == id}) else {
+            ui?.displayMessage(title: Constant.error, message: Constant.invalidData)
+            return
+        }
+        self.ui?.navigate(to: .detail(pharmacy: pharmacy))
+    }
+    
     func logoutSelected(){
         self.ui?.askLogoutConfirmation()
     }
@@ -80,5 +88,6 @@ fileprivate struct Constant {
     static let noResults = "No data was received"
     static let invalidData = "Invalid data received"
     static let invalidLimit = "Limit has to be a number"
+    static let pharmacyNotFound = "Limit has to be a number"
 }
 

@@ -7,10 +7,11 @@
 
 import UIKit
 
-public enum Route: Equatable {
+public enum Route: Equatable {    
     case register
     case home(userName: String)
-    
+    case detail(pharmacy: Pharmacy)
+        
     case back
 }
 

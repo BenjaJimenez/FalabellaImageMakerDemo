@@ -23,6 +23,7 @@ class HomeTableViewController: UITableViewController {
         super.viewDidLoad()
         loadViews()
         presenter = locator.homePresenter(ui: self)
+        
     }
     
     func loadViews() {
@@ -95,8 +96,11 @@ class HomeTableViewController: UITableViewController {
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[stackView]|", options: .alignAllBottom, metrics: nil, views: ["stackView": stackView]));
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[stackView]-|", options: .alignAllBottom, metrics: nil, views: ["stackView": stackView]));
         
-        
         self.tableView.tableHeaderView = view
+        
+        var tapGesture = UITapGestureRecognizer()
+        tapGesture.delegate = self
+        self.view.addGestureRecognizer(tapGesture)
 
     }
     
@@ -155,9 +159,15 @@ extension HomeTableViewController {
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = pharmacies[indexPath.row]
+        presenter?.pharmacySelected(id: item.id)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
-// MARK: - textfield Delegates
+// MARK: - textfield Delegate
 
 extension HomeTableViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -168,5 +178,15 @@ extension HomeTableViewController: UITextFieldDelegate {
             searchButtonTouched()
         }
         return true
+    }
+}
+
+
+// MARK: - TapGesture Delegate
+
+extension HomeTableViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        view.endEditing(true)
+        return false
     }
 }
