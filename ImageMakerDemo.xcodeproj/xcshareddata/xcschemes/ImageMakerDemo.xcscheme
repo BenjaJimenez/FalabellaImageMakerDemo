@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "431C3046253F1EA00043A9EF"
+               BlueprintIdentifier = "43380E2A253F73C000977C4F"
                BuildableName = "ImageMakerDemoTests.xctest"
                BlueprintName = "ImageMakerDemoTests"
                ReferencedContainer = "container:ImageMakerDemo.xcodeproj">

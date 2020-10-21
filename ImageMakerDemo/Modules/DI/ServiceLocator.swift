@@ -19,7 +19,7 @@ struct ServiceLocator {
     }
     
     func homePresenter(ui: HomeUI?) -> HomePresenter{
-        return HomePresenter(ui: ui)
+        return HomePresenter(getPharmacies: getPharmacies, mapper: HomeViewMapper(), ui: ui)
     }
 
 // MARK: - Use Cases
@@ -32,9 +32,21 @@ struct ServiceLocator {
         return RegisterUser(datasource: localDatasource)
     }
     
+    var getPharmacies: GetPharmacies {
+        GetPharmacies(datasource: minsalDatasource, searchDatasource: gobDatasource)
+    }
+    
 // MARK: - Datasource
     
     var localDatasource: UserDatasource {
         return UserDefaultsDatasource(userDefaults: UserDefaults.standard)
+    }
+    
+    var minsalDatasource: MinsalDatasource {
+        return MinsalDatasource(apiClient: AlamoAPIClient())
+    }
+    
+    var gobDatasource: SearchDatasource {
+        return GobDatasource(apiClient: AlamoAPIClient())
     }
 }

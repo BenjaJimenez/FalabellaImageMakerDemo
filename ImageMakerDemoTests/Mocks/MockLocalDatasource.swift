@@ -23,6 +23,4 @@ class MockUserDefaultsDatasource: UserDatasource {
         registerCalled = true
         return true
     }
-    
-    
 }
