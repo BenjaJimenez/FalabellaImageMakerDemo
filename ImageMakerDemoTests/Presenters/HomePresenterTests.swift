@@ -11,12 +11,125 @@ import XCTest
 class HomePresenterTests: XCTestCase {
     
     fileprivate var ui: MockUI!
+    var ds: MockPharmacyDatasource!
     var presenter: HomePresenter!
 
-    override func setUpWithError() throws {
+    override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         ui = MockUI()
-        presenter = HomePresenter(ui: ui)
+        ds = MockPharmacyDatasource()
+        let useCase = GetPharmacies(datasource: ds)
+        presenter = HomePresenter(getPharmacies: useCase, mapper: HomeViewMapper(), ui: ui)
+    }
+    
+    override func tearDownWithError() throws {
+        ds.pharmacies = []
+        ds.called = false
+        
+        ui.askedConfirmation = false
+        ui.destination = nil
+        ui.vms = []
+        ui.displayCalled = false
+    }
+    
+    func testLoadNoData(){
+        presenter.loadData()
+        XCTAssertTrue(ds.called)
+        XCTAssertNotNil(presenter.pharmacies)
+        XCTAssertEqual(presenter.pharmacies.count, 0)
+    }
+    
+    func testLoadData(){
+        ds.pharmacies = [Pharmacy(), Pharmacy(), Pharmacy()]
+        presenter.loadData()
+        XCTAssertTrue(ds.called)
+        XCTAssertNotNil(presenter.pharmacies)
+        XCTAssertEqual(presenter.pharmacies.count, 3)
+    }
+    
+    func testMapInvalidData(){
+        presenter.mapResults([Pharmacy(), Pharmacy()])
+        XCTAssertTrue(ds.called)
+        XCTAssertFalse(ui.displayCalled)
+        XCTAssertEqual(ui.vms.count, 0)
+    }
+    
+    func testMapMixedData(){
+        let validPharmacy: Pharmacy = {
+            var p = Pharmacy()
+            p.id = "1"
+            p.name = "name"
+            p.address = "address"
+            p.city = "city"
+            return p
+        }()
+        
+        let invalidPharmacy: Pharmacy = {
+            var p = Pharmacy()
+            p.address = "address"
+            p.city = "city"
+            return p
+        }()
+        
+        presenter.mapResults([Pharmacy(), validPharmacy, invalidPharmacy])
+        XCTAssertTrue(ui.displayCalled)
+        XCTAssertEqual(ui.vms.count, 1)
+    }
+    
+    func testMapValidData(){
+        let validPharmacy: Pharmacy = {
+            var p = Pharmacy()
+            p.id = "1"
+            p.name = "name"
+            p.address = "address"
+            p.city = "city"
+            return p
+        }()
+        
+        let validPharmacy2: Pharmacy = {
+            var p = Pharmacy()
+            p.id = "2"
+            p.name = "name"
+            p.address = "address"
+            p.city = "city"
+            return p
+        }()
+        
+        let validPharmacy3: Pharmacy = {
+            var p = Pharmacy()
+            p.id = "3"
+            p.name = "name"
+            p.address = "address"
+            p.city = "city"
+            return p
+        }()
+        let pharmacies  = [validPharmacy, validPharmacy2, validPharmacy3]
+        presenter.mapResults(pharmacies)
+        XCTAssertTrue(ui.displayCalled)
+        XCTAssertEqual(ui.vms.count, pharmacies.count)
+    }
+    
+    func testMappingData(){
+        let validPharmacy: Pharmacy = {
+            var p = Pharmacy()
+            p.id = "1"
+            p.name = "name"
+            p.address = "address"
+            p.city = "city"
+            return p
+        }()
+        
+        presenter.mapResults([validPharmacy])
+        XCTAssertTrue(ds.called)
+        XCTAssertTrue(ui.displayCalled)
+        XCTAssertEqual(ui.vms.count, 1)
+        
+        let vm = ui.vms[0]
+        XCTAssertEqual(validPharmacy.id, vm.id)
+        XCTAssertEqual(validPharmacy.name, vm.name)
+        XCTAssertEqual(validPharmacy.address, vm.address)
+        XCTAssertEqual(validPharmacy.city, vm.city)
+        
     }
 
     func testLogoutAsk() throws {
@@ -33,8 +146,16 @@ class HomePresenterTests: XCTestCase {
 }
 
 fileprivate class MockUI: HomeUI {
+    
     var askedConfirmation = false
     var destination: Route!
+    var vms: [PharmacyCell] = []
+    var displayCalled = false
+    
+    func displayPharmacies(_ pharmacies: [PharmacyCell]) {
+        displayCalled = true
+        vms = pharmacies
+    }
     
     func askLogoutConfirmation() {
         askedConfirmation = true
