@@ -32,3 +32,25 @@ public struct Pharmacy: Codable {
         
     }
 }
+
+public struct SearchReponse: Codable {
+    var result: SearchResult?
+    
+    private enum CodingKeys : String, CodingKey {case result}
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        result = try container.decodeIfPresent(SearchResult.self, forKey: .result)
+    }
+}
+
+public struct SearchResult: Codable {
+    var records : [Pharmacy]?
+    
+    private enum CodingKeys : String, CodingKey {case records}
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        records = try container.decodeIfPresent([Pharmacy].self, forKey: .records)
+    }
+}

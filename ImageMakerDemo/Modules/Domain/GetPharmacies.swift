@@ -7,11 +7,21 @@
 
 import Foundation
 
-public struct GetPharmacies {
+public class GetPharmacies {
     
     var datasource: PharmacyDatasource
+    var searchDatasource: SearchDatasource
     
-    func get(completion: @escaping ([Pharmacy]?) -> Void){
-        datasource.getPharmacies(completion: completion)
+    init(datasource: PharmacyDatasource, searchDatasource: SearchDatasource) {
+        self.datasource = datasource
+        self.searchDatasource = searchDatasource
+    }
+    
+    func get(keyword: String? = nil, limit: Int? = nil, completion: @escaping ([Pharmacy]?) -> Void){
+        if !(keyword ?? "").isEmpty || (limit ?? 0) > 0 {
+            searchDatasource.search(keyword, limit: limit, completion: completion)
+        }else{
+            datasource.getPharmacies(completion: completion)
+        }
     }
 }

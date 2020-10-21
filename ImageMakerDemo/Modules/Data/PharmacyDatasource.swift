@@ -17,7 +17,7 @@ public struct MinsalDatasource : PharmacyDatasource {
     var apiClient: APIClient
     
     public func getPharmacies(completion: @escaping ([Pharmacy]?) -> Void){
-        apiClient.request(url: "https://farmanet.minsal.cl/index.php/ws/getLocales") { data in
+        apiClient.request(url: Constants.url) { data in
             guard let data = data else {
                 completion(nil)
                 return
@@ -31,4 +31,8 @@ public struct MinsalDatasource : PharmacyDatasource {
             }
         }
     }
+}
+
+fileprivate struct Constants {
+    static let url = "https://farmanet.minsal.cl/index.php/ws/getLocales"
 }

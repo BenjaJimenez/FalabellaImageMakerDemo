@@ -11,20 +11,19 @@ import XCTest
 class HomePresenterTests: XCTestCase {
     
     fileprivate var ui: MockUI!
-    var ds: MockPharmacyDatasource!
+    var uc: MockGetPharmacies!
     var presenter: HomePresenter!
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         ui = MockUI()
-        ds = MockPharmacyDatasource()
-        let useCase = GetPharmacies(datasource: ds)
-        presenter = HomePresenter(getPharmacies: useCase, mapper: HomeViewMapper(), ui: ui)
+        uc = MockGetPharmacies()
+        presenter = HomePresenter(getPharmacies: uc, mapper: HomeViewMapper(), ui: ui)
     }
     
     override func tearDownWithError() throws {
-        ds.pharmacies = []
-        ds.called = false
+        uc.pharmacies = nil
+        uc.called = false
         
         ui.askedConfirmation = false
         ui.destination = nil
@@ -32,24 +31,23 @@ class HomePresenterTests: XCTestCase {
         ui.displayCalled = false
     }
     
-    func testLoadNoData(){
+    func testLoadEmptyData(){
         presenter.loadData()
-        XCTAssertTrue(ds.called)
+        XCTAssertTrue(uc.called)
         XCTAssertNotNil(presenter.pharmacies)
         XCTAssertEqual(presenter.pharmacies.count, 0)
     }
     
     func testLoadData(){
-        ds.pharmacies = [Pharmacy(), Pharmacy(), Pharmacy()]
+        uc.pharmacies = [Pharmacy(), Pharmacy(), Pharmacy()]
         presenter.loadData()
-        XCTAssertTrue(ds.called)
+        XCTAssertTrue(uc.called)
         XCTAssertNotNil(presenter.pharmacies)
         XCTAssertEqual(presenter.pharmacies.count, 3)
     }
     
     func testMapInvalidData(){
         presenter.mapResults([Pharmacy(), Pharmacy()])
-        XCTAssertTrue(ds.called)
         XCTAssertFalse(ui.displayCalled)
         XCTAssertEqual(ui.vms.count, 0)
     }
@@ -120,7 +118,6 @@ class HomePresenterTests: XCTestCase {
         }()
         
         presenter.mapResults([validPharmacy])
-        XCTAssertTrue(ds.called)
         XCTAssertTrue(ui.displayCalled)
         XCTAssertEqual(ui.vms.count, 1)
         

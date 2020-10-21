@@ -33,7 +33,7 @@ struct ServiceLocator {
     }
     
     var getPharmacies: GetPharmacies {
-        GetPharmacies(datasource: minsalDatasource)
+        GetPharmacies(datasource: minsalDatasource, searchDatasource: gobDatasource)
     }
     
 // MARK: - Datasource
@@ -44,5 +44,9 @@ struct ServiceLocator {
     
     var minsalDatasource: MinsalDatasource {
         return MinsalDatasource(apiClient: AlamoAPIClient())
+    }
+    
+    var gobDatasource: SearchDatasource {
+        return GobDatasource(apiClient: AlamoAPIClient())
     }
 }
