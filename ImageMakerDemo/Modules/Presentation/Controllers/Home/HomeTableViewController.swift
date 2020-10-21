@@ -12,6 +12,8 @@ class HomeTableViewController: UITableViewController {
     let locator = ServiceLocator()
     var presenter: HomePresenter?
     var name : String?
+    
+    var pharmacies = [PharmacyCell]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,9 @@ class HomeTableViewController: UITableViewController {
         
         let barButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutTouched(_ :)))
         self.navigationItem.setRightBarButton(barButton, animated: true)
+        
+        tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
+
     }
     
     @objc func logoutTouched(_ sender: Any?){
@@ -34,7 +39,11 @@ class HomeTableViewController: UITableViewController {
 }
 
 extension HomeTableViewController: HomeUI {
-    
+  
+    func displayPharmacies(_ pharmacies: [PharmacyCell]) {
+        self.pharmacies = pharmacies
+        self.tableView.reloadData()
+    }
     
     func navigate(to route: Route) {
         Router.navigate(to: route, from: self)
@@ -54,23 +63,17 @@ extension HomeTableViewController: HomeUI {
 
 extension HomeTableViewController {
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return pharmacies.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! HomeTableViewCell
+        let data = pharmacies[indexPath.row]
+        cell.configure(data)
 
         return cell
     }
-    */
+
 }

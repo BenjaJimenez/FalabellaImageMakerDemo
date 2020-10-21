@@ -28,8 +28,14 @@
 		43380E3E253F742600977C4F /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4357F67C253F71D90012F9CB /* HomePresenterTests.swift */; };
 		43380E3F253F742600977C4F /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3059253F25AD0043A9EF /* LoginPresenterTests.swift */; };
 		43380E42253F742E00977C4F /* UserDefaultsDatasourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C3076253F357C0043A9EF /* UserDefaultsDatasourceTests.swift */; };
+		43380E55253F86D500977C4F /* PharmacyDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43380E54253F86D500977C4F /* PharmacyDatasource.swift */; };
+		43380E65253F8E9500977C4F /* Pharmacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43380E59253F88C900977C4F /* Pharmacy.swift */; };
 		4357F64E253F688C0012F9CB /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4357F64D253F688C0012F9CB /* HomeTableViewController.swift */; };
 		4357F652253F698E0012F9CB /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4357F651253F698E0012F9CB /* HomePresenter.swift */; };
+		43EF7331253F8F47001579BC /* GetPharmacies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF7330253F8F47001579BC /* GetPharmacies.swift */; };
+		43EF7348253FB3E1001579BC /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF7347253FB3E1001579BC /* HomeTableViewCell.swift */; };
+		43EF734C253FC0F8001579BC /* ViewMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF734B253FC0F8001579BC /* ViewMapper.swift */; };
+		43EF7350253FC579001579BC /* MockPharmacyDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF734F253FC579001579BC /* MockPharmacyDatasource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,9 +73,15 @@
 		431E5F39253E32C8008C27D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		431E5F3B253E32C8008C27D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43380E2B253F73C000977C4F /* ImageMakerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageMakerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43380E54253F86D500977C4F /* PharmacyDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PharmacyDatasource.swift; sourceTree = "<group>"; };
+		43380E59253F88C900977C4F /* Pharmacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pharmacy.swift; sourceTree = "<group>"; };
 		4357F64D253F688C0012F9CB /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		4357F651253F698E0012F9CB /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		4357F67C253F71D90012F9CB /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
+		43EF7330253F8F47001579BC /* GetPharmacies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPharmacies.swift; sourceTree = "<group>"; };
+		43EF7347253FB3E1001579BC /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		43EF734B253FC0F8001579BC /* ViewMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMapper.swift; sourceTree = "<group>"; };
+		43EF734F253FC579001579BC /* MockPharmacyDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPharmacyDatasource.swift; sourceTree = "<group>"; };
 		6E0D836ABAE65B30AFDC58BE /* Pods-FalabellaImageMakerDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FalabellaImageMakerDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-FalabellaImageMakerDemoTests/Pods-FalabellaImageMakerDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6FC1D6D8F484C0EF9534580 /* Pods-ImageMakerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageMakerDemo.debug.xcconfig"; path = "Target Support Files/Pods-ImageMakerDemo/Pods-ImageMakerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		B2044807D680E88D3DAAC67B /* Pods-FalabellaImageMakerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FalabellaImageMakerDemo.release.xcconfig"; path = "Target Support Files/Pods-FalabellaImageMakerDemo/Pods-FalabellaImageMakerDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -102,10 +114,8 @@
 		431C3011253E44D00043A9EF /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				434AC6F7253F680F00FE6DB7 /* Home */,
 				431C3018253E474E0043A9EF /* ViewModel */,
-				431C3013253E44EF0043A9EF /* Login */,
-				431C3025253E4A150043A9EF /* Register */,
+				43EF733A253F8FBE001579BC /* Controllers */,
 				431C303D253E86D10043A9EF /* Router */,
 			);
 			path = Presentation;
@@ -116,6 +126,7 @@
 			children = (
 				431C301C253E490A0043A9EF /* LogUser.swift */,
 				431C302C253E4BD80043A9EF /* RegisterUser.swift */,
+				43EF7330253F8F47001579BC /* GetPharmacies.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -133,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				431C3019253E475B0043A9EF /* ViewModel.swift */,
+				43EF734B253FC0F8001579BC /* ViewMapper.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -140,7 +152,9 @@
 		431C301F253E49560043A9EF /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				43380E58253F88BF00977C4F /* Model */,
 				431C3021253E49770043A9EF /* UserDefaultsDatasource.swift */,
+				43380E54253F86D500977C4F /* PharmacyDatasource.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -185,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				431C3068253F284D0043A9EF /* MockLocalDatasource.swift */,
+				43EF734F253FC579001579BC /* MockPharmacyDatasource.swift */,
 				431C307C253F35980043A9EF /* MockUserDefaults.swift */,
 			);
 			path = Mocks;
@@ -251,13 +266,32 @@
 			path = ImageMakerDemoTests;
 			sourceTree = "<group>";
 		};
+		43380E58253F88BF00977C4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43380E59253F88C900977C4F /* Pharmacy.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		434AC6F7253F680F00FE6DB7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				4357F64D253F688C0012F9CB /* HomeTableViewController.swift */,
 				4357F651253F698E0012F9CB /* HomePresenter.swift */,
+				43EF7347253FB3E1001579BC /* HomeTableViewCell.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		43EF733A253F8FBE001579BC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				434AC6F7253F680F00FE6DB7 /* Home */,
+				431C3013253E44EF0043A9EF /* Login */,
+				431C3025253E4A150043A9EF /* Register */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		48197D6C03BEB5F20FA25A47 /* Pods */ = {
@@ -433,13 +467,18 @@
 				431C3015253E45040043A9EF /* LoginPresenter.swift in Sources */,
 				431C3033253E54110043A9EF /* ServiceLocator.swift in Sources */,
 				431C303F253E86DD0043A9EF /* Router.swift in Sources */,
+				43EF7348253FB3E1001579BC /* HomeTableViewCell.swift in Sources */,
+				43EF734C253FC0F8001579BC /* ViewMapper.swift in Sources */,
 				431C3027253E4A440043A9EF /* RegisterViewController.swift in Sources */,
 				4357F652253F698E0012F9CB /* HomePresenter.swift in Sources */,
 				431C302A253E4A500043A9EF /* RegisterPresenter.swift in Sources */,
 				431C302D253E4BD80043A9EF /* RegisterUser.swift in Sources */,
 				431E5F32253E32C6008C27D2 /* LoginViewController.swift in Sources */,
 				431E5F2E253E32C6008C27D2 /* AppDelegate.swift in Sources */,
+				43380E55253F86D500977C4F /* PharmacyDatasource.swift in Sources */,
 				431E5F30253E32C6008C27D2 /* SceneDelegate.swift in Sources */,
+				43380E65253F8E9500977C4F /* Pharmacy.swift in Sources */,
+				43EF7331253F8F47001579BC /* GetPharmacies.swift in Sources */,
 				431C301D253E490A0043A9EF /* LogUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,6 +492,7 @@
 				43380E3E253F742600977C4F /* HomePresenterTests.swift in Sources */,
 				43380E3F253F742600977C4F /* LoginPresenterTests.swift in Sources */,
 				43380E42253F742E00977C4F /* UserDefaultsDatasourceTests.swift in Sources */,
+				43EF7350253FC579001579BC /* MockPharmacyDatasource.swift in Sources */,
 				43380E3D253F742600977C4F /* RegisterPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
