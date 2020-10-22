@@ -25,5 +25,35 @@ public struct HomeViewMapper {
         
         return PharmacyCell(id: id, name: name, address: address, city: city)
     }
+}
+
+public struct DetailViewMapper {
+   
+    func map(_ model: Pharmacy) -> [String] {
+        let mirror = Mirror(reflecting: model)
+        var values = [String]()
+        for (label, value) in mirror.children {
+            guard let label = label else {
+                continue
+            }
+            
+            if let string = value as? String {
+                values.append(label + ": " + string)
+                continue
+            }
+            
+            if let intNumber = value as? Int {
+                values.append(label + ": " + String(intNumber))
+                continue
+            }
+            
+            if let doubleNumber = value as? Double {
+                values.append(label + ": " + String(doubleNumber))
+                continue
+            }
+            
+        }
+        return values
+    }
     
 }

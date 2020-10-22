@@ -40,6 +40,9 @@
 		43AB24AD254091A8006F8D71 /* MockSearchDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AB24AC254091A8006F8D71 /* MockSearchDatasource.swift */; };
 		43AB24B2254093C5006F8D71 /* MockGetPharmacies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AB24B1254093C5006F8D71 /* MockGetPharmacies.swift */; };
 		43AB24B925409415006F8D71 /* GetPharmaciesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AB24B825409415006F8D71 /* GetPharmaciesTests.swift */; };
+		43AB24C42540DAC9006F8D71 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AB24C32540DAC9006F8D71 /* DetailViewController.swift */; };
+		43AB24CA2540DAEB006F8D71 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AB24C92540DAEB006F8D71 /* DetailPresenter.swift */; };
+		43AB24CE254106AC006F8D71 /* DetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AB24CD254106AC006F8D71 /* DetailPresenterTests.swift */; };
 		43EF7331253F8F47001579BC /* GetPharmacies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF7330253F8F47001579BC /* GetPharmacies.swift */; };
 		43EF7348253FB3E1001579BC /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF7347253FB3E1001579BC /* HomeTableViewCell.swift */; };
 		43EF734C253FC0F8001579BC /* ViewMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF734B253FC0F8001579BC /* ViewMapper.swift */; };
@@ -94,6 +97,9 @@
 		43AB24AC254091A8006F8D71 /* MockSearchDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchDatasource.swift; sourceTree = "<group>"; };
 		43AB24B1254093C5006F8D71 /* MockGetPharmacies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetPharmacies.swift; sourceTree = "<group>"; };
 		43AB24B825409415006F8D71 /* GetPharmaciesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPharmaciesTests.swift; sourceTree = "<group>"; };
+		43AB24C32540DAC9006F8D71 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		43AB24C92540DAEB006F8D71 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		43AB24CD254106AC006F8D71 /* DetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterTests.swift; sourceTree = "<group>"; };
 		43EF7330253F8F47001579BC /* GetPharmacies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPharmacies.swift; sourceTree = "<group>"; };
 		43EF7347253FB3E1001579BC /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		43EF734B253FC0F8001579BC /* ViewMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMapper.swift; sourceTree = "<group>"; };
@@ -232,6 +238,7 @@
 				431C3059253F25AD0043A9EF /* LoginPresenterTests.swift */,
 				431C306C253F2AA70043A9EF /* RegisterPresenterTests.swift */,
 				4357F67C253F71D90012F9CB /* HomePresenterTests.swift */,
+				43AB24CD254106AC006F8D71 /* DetailPresenterTests.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -316,9 +323,19 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		43AB24C22540DAAC006F8D71 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				43AB24C32540DAC9006F8D71 /* DetailViewController.swift */,
+				43AB24C92540DAEB006F8D71 /* DetailPresenter.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		43EF733A253F8FBE001579BC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				43AB24C22540DAAC006F8D71 /* Detail */,
 				434AC6F7253F680F00FE6DB7 /* Home */,
 				431C3013253E44EF0043A9EF /* Login */,
 				431C3025253E4A150043A9EF /* Register */,
@@ -504,10 +521,12 @@
 				43EF7348253FB3E1001579BC /* HomeTableViewCell.swift in Sources */,
 				43EF734C253FC0F8001579BC /* ViewMapper.swift in Sources */,
 				431C3027253E4A440043A9EF /* RegisterViewController.swift in Sources */,
+				43AB24C42540DAC9006F8D71 /* DetailViewController.swift in Sources */,
 				4357F652253F698E0012F9CB /* HomePresenter.swift in Sources */,
 				431C302A253E4A500043A9EF /* RegisterPresenter.swift in Sources */,
 				431C302D253E4BD80043A9EF /* RegisterUser.swift in Sources */,
 				431E5F32253E32C6008C27D2 /* LoginViewController.swift in Sources */,
+				43AB24CA2540DAEB006F8D71 /* DetailPresenter.swift in Sources */,
 				431E5F2E253E32C6008C27D2 /* AppDelegate.swift in Sources */,
 				43380E55253F86D500977C4F /* PharmacyDatasource.swift in Sources */,
 				431E5F30253E32C6008C27D2 /* SceneDelegate.swift in Sources */,
@@ -530,6 +549,7 @@
 				43AB24B2254093C5006F8D71 /* MockGetPharmacies.swift in Sources */,
 				43380E3E253F742600977C4F /* HomePresenterTests.swift in Sources */,
 				43380E3F253F742600977C4F /* LoginPresenterTests.swift in Sources */,
+				43AB24CE254106AC006F8D71 /* DetailPresenterTests.swift in Sources */,
 				43AB249925407F1E006F8D71 /* MockAPI.swift in Sources */,
 				43380E42253F742E00977C4F /* UserDefaultsDatasourceTests.swift in Sources */,
 				43EF7350253FC579001579BC /* MockPharmacyDatasource.swift in Sources */,

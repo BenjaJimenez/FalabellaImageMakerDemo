@@ -7,10 +7,11 @@
 
 import UIKit
 
-public enum Route: Equatable {
+public enum Route: Equatable {    
     case register
     case home(userName: String)
-    
+    case detail(pharmacy: Pharmacy)
+        
     case back
 }
 
@@ -26,11 +27,17 @@ public struct Router {
             let nv = UINavigationController(rootViewController: hvc)
             nv.modalPresentationStyle = .fullScreen
             vc.present(nv, animated: true, completion: nil)
-            break
+        case .detail(pharmacy: let pharmacy):
+            let dvc = DetailViewController()
+            let locator = ServiceLocator()
+            dvc.presenter = locator.detailPresenter(pharmacy: pharmacy, ui: dvc)
+            if let nv = vc.navigationController {
+                nv.pushViewController(dvc, animated: true)
+            }else {
+                vc.present(dvc, animated: true, completion: nil)
+            }
         case .back:
             vc.dismiss(animated: true, completion: nil)
-        default:
-            break
         }
     }
 }
