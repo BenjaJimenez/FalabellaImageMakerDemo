@@ -31,6 +31,7 @@ class HomeTableViewController: UITableViewController {
             self.title = "Welcome " + name
         }
         
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         let barButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutTouched(_ :)))
         self.navigationItem.setRightBarButton(barButton, animated: true)
         
@@ -98,7 +99,7 @@ class HomeTableViewController: UITableViewController {
         
         self.tableView.tableHeaderView = view
         
-        var tapGesture = UITapGestureRecognizer()
+        let tapGesture = UITapGestureRecognizer()
         tapGesture.delegate = self
         self.view.addGestureRecognizer(tapGesture)
 

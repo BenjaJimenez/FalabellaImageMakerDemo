@@ -21,6 +21,10 @@ struct ServiceLocator {
     func homePresenter(ui: HomeUI?) -> HomePresenter{
         return HomePresenter(getPharmacies: getPharmacies, mapper: HomeViewMapper(), ui: ui)
     }
+    
+    func detailPresenter(pharmacy: Pharmacy, ui: DetailUI) -> DetailPresenter {
+        return DetailPresenter(pharmacy: pharmacy, mapper: DetailViewMapper(), ui: ui)
+    }
 
 // MARK: - Use Cases
     

@@ -229,6 +229,4 @@ fileprivate class MockUI: HomeUI {
         messageCalled = true
         messageTitle = title
     }
-    
-    
 }
